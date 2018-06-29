@@ -1,0 +1,7 @@
+{{#if accounts}}
+  {{#each accounts}}
+    <p>{{type}}: ${{balance}}.00</p>
+  {{/each}}
+{{else}}
+  <h3>No Transactions.</h3>
+{{/if}}

@@ -1,0 +1,18 @@
+<h2>Create New Transaction:</h2>
+<form action="/accounts/{{account.id}}/transactions/new" method="POST">
+  Deposit: <input name="type" type="radio" value="deposit" />
+  <br />
+  Withdrawal: <input name="type" type="radio" value="withdrawal" />
+  <br />
+  <label for="amount">Amount</label>
+  <input name="amount" type="text" />
+  <input type="submit" />
+</form>
+
+<h2>${{account.balance}}.00</h2>
+<h4>{{account.type}}</h4>
+{{#each account.Transactions}}
+  <p>
+    ${{amount}}.00 {{type}}
+  </p>
+{{/each}}
